@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punto Brillante - Lavado de Autos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .info {
+            max-width: 900px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        .info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Punto Brillante - Lavado de Autos</h1>
+    <p>¡Tu auto merece estar brillante!</p>
+</header>
+
+<section id="gallery">
+    <h2>Nuestra Galería</h2>
+    <div class="gallery">
+        <img src="https://via.placeholder.com/300x200" alt="Lavado de autos 1">
+        <img src="https://via.placeholder.com/300x200" alt="Lavado de autos 2">
+        <img src="https://via.placeholder.com/300x200" alt="Lavado de autos 3">
+    </div>
+</section>
+
+<section id="info">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="info">
+        <p><strong>Punto Brillante</strong> es un servicio de lavado de autos premium. Ofrecemos una experiencia de alta calidad con atención al detalle. ¡Hacemos que tu auto luzca como nuevo!</p>
+        <p>Utilizamos productos ecológicos y herramientas de última tecnología para garantizar que tu vehículo reciba el mejor trato posible.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <div class="contact-form">
+        <input type="text" id="name" placeholder="Tu nombre" required>
+        <input type="email" id="email" placeholder="Tu correo electrónico" required>
+        <textarea id="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+        <button onclick="submitContactForm()">Enviar</button>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Punto Brillante | Todos los derechos reservados</p>
+</footer>
+
+<script>
+    function submitContactForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (name && email && message) {
+            alert(`Gracias por tu mensaje, ${name}! Nos pondremos en contacto pronto.`);
+            document.getElementById("name").value = '';
+            document.getElementById("email").value = '';
+            document.getElementById("message").value = '';
+        } else {
+            alert("Por favor, completa todos los campos.");
+        }
+    }
+</script>
+
+</body>
+</html>
